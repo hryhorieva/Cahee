@@ -1,0 +1,349 @@
+@import "vars.scss";
+@import "reset.scss";
+@import "mixins.scss";
+
+
+
+body {
+    background: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
+    border: none;
+    color: #000000;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+    font-family: Arial;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: underline;
+    outline: none;
+    
+    &a:hover {
+    text-decoration: none;
+}
+}
+
+input::-webkit-input-placeholder {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+textarea::placeholder {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+
+
+h1, h2 {
+    font-size: 20px;
+    padding: 0 0 10px 0;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+}
+
+
+.wrapper {
+    background-size: cover;
+}
+
+.wrapper__page-home {
+    background-image: url(/img/home-page-bg.jpg);
+}
+
+.page-home {
+    max-width: 1170px; 
+    width: 100%;
+    padding: 50px 0 165px 0;
+}
+
+.menu {
+    display: flex;
+    padding: 0 0 260px 0;
+    align-items: center;
+
+    &__col {
+        flex-grow: 1;
+    }
+
+    &__logo {
+        padding: 0 50px 0 165px;
+        font-family: $fontLogo;
+        font-size: 50px;
+        color: $colorBase;
+        text-decoration: none;
+    }
+
+    &__logo:hover {
+        font-weight: bold;
+    }
+}
+
+
+.nav {
+    text-align: right;
+
+    &__link {
+            margin: 0 40px 0 0;
+            color: $colorBase;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 25px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            border: 3px solid transparent;  
+            
+            &--contacts {
+            margin: 0;
+            }
+    }
+
+    &__link:hover {
+        border-top: 3px solid $colorDeco; 
+    }
+}
+
+
+.content {
+    display: block;
+    width: 40%;
+    text-align: left;
+    padding: 0px 165px 0 165px;
+
+    &__title {
+        color: $colorBase;
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    &__text {
+        color: $colorBase;
+        font-size: 17px;
+        font-weight: 300;
+        padding: 37px 0;
+    }
+
+    &__button {
+        background-color: $colorDeco;
+        width: 200px;
+        color: #ffffff;
+        font-family: $fontMain;
+        font-weight: 300;
+        font-size: 20px;
+        padding: 20px;
+        border: none;
+        box-shadow: 4px 3px 7px -4px #000000;
+        transition-duration: 0.4s;
+    }
+
+    &__button:hover {
+        font-weight: bold;
+    }
+
+    
+
+    &__button:active {
+        box-shadow: 4px 3px 7px -4px #000000 inset;
+    }
+}
+
+
+.wrapper__page-about {
+    background-image: url(/img/about-page-bg.jpg);
+    background-color: #00b3b3;
+}
+
+.page-about {
+    max-width: 1170px; 
+    width: 100%;
+    padding: 180px 0 120px 0;
+}
+
+.content {
+    &--about {
+        display: block;
+        margin: 0 0 0 auto;
+        padding: 0;
+        
+    }
+}
+
+
+.wrapper__page-contacts {
+    background-image: url(/img/bg.jpg);
+}
+
+.page-contacts {
+    max-width: 1170px; 
+    width: 100%;
+}
+
+.content__contacts {
+    width: 100%;
+    padding: 100px 0 45px 0;
+    text-align: center;
+}
+
+.content__title--contacts {
+    font-size: 90px;
+    font-weight: bold;
+    color: #262626;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.content__text--contacts{
+    display: block;
+    font-size: 17px;
+    font-weight: 300;
+    color: #262626;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid-wrapper {
+    display: flex;
+}
+
+.contacts {
+    flex-grow: 1;
+
+    &__col {
+        &--form {
+            padding: 0 100px 0 165px;
+        }
+
+        &--ctrl {
+            width: 100%;
+            margin: 0 0 15px 0;
+            background-color: #7fe1e1;
+            opacity: 0.5;
+            border: 5px solid transparent;
+            box-sizing: border-box;
+            padding: 15px;
+            transition-duration: 0.3s;
+
+                :focus {
+                    color: #ffffff;
+                    font-weight: bold;
+                    border-left-color: #355b82;
+                    background-color: #00c4c4;
+                    }
+        }
+
+        &--message {
+            resize: none;
+            height: 250px;
+        }
+
+        &--contacts {
+            font-size: 17px;
+            font-weight: bold;
+            color: #262626;
+        }
+
+        &--data {
+            margin: 10px 0 20px 0;
+            padding: 0 0 10px 0;
+        }
+
+        &--address {
+            padding: 0 165px 0 0;
+        }
+    
+        &--name:invalid {
+            background-color: #e07e8e;
+        }
+    
+        &--email:invalid {
+            background-color: #e07e8e;
+        }
+    
+        &--phone:invalid {
+            background-color: #e07e8e;
+        }
+
+
+    }
+}
+
+
+.footer {
+    display: flex;
+    background-color: #000000;
+    width: 100%;
+
+    &__content {
+        color: #b9b9b9;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 35px 82px;
+        flex-grow: 1;
+
+            &--logo {
+                font-family: 'Pacifico', cursive;
+                font-size: 25px;
+                text-align: center;
+            }
+    }
+
+    &__emphasize {
+        color: #ff2b58;
+        font-weight: bold;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav__link--contacts {
+        margin-right: 40px;
+     }
+    
+    
+    .grid-wrapper {
+        flex-direction: column;
+    }
+
+    .contacts__col--address {
+        padding: 0 0 0 165px;
+    }
+}
+
+
+
+
