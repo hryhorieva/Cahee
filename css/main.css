@@ -146,7 +146,7 @@ h1, h2 {
 }
 
 .wrapper__page-home {
-  background-image: url(/img/home-page-bg.jpg);
+  background-image: url(img/home-page-bg.jpg);
 }
 
 .page-home {
@@ -253,7 +253,7 @@ h1, h2 {
 }
 
 .wrapper__page-about {
-  background-image: url(/img/about-page-bg.jpg);
+  background-image: url(img/about-page-bg.jpg);
   background-color: #00b3b3;
 }
 
@@ -270,7 +270,7 @@ h1, h2 {
 }
 
 .wrapper__page-contacts {
-  background-image: url(/img/bg.jpg);
+  background-image: url(img/bg.jpg);
 }
 
 .page-contacts {
